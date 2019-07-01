@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+      
+      #customer-label-container {
+        position: relative;
+        display: block;
+        padding-left: 20px;
+        margin: 0px;
+        height: 20px;
+      }
+      #customer-label-container input[type='radio'] {
+        opacity: 0;
+      }
+      #customer-label-container span {
+        display: block;
+        position: absolute;
+        top: 0px;
+        cursor: pointer;
+      }
+
+      #customer-label-container span::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 1px solid #848f90;
+        position: absolute;
+        top: 50%;
+        left: -12px;
+        /* left: 50%; */
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+      
+      #customer-label-container span::after {
+        content: '';
+        background: #558255;
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: -12px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 0.5s ease-out;
+      }
+
+      #customer-label-container input:checked + span::after  {
+        content: '';
+        background: #558255;
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: -12px;
+        transform: translate(-50%, -50%) scale(1);
+        border-radius: 50%;
+      }
+      
+    </style>
+  </head>
+  <body>
+      <label id="customer-label-container">
+        <input type="radio" name="group">
+        <span>Female</span>
+      </label>
+
+      <label id="customer-label-container">
+        <input type="radio" name="group">
+        <span>Male</span>
+      </label>
+      
+    <script src="" async defer></script>
+  </body>
+</html>
